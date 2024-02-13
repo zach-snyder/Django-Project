@@ -1,0 +1,31 @@
+1.Install correct version of python from python.org. This documentation was done based on 3.11.4 on windows 11 using CMD as command line interface
+
+python --version will display the version of python you are using
+
+either in windows ui or in command line make a directory to store your virtual environment 
+
+directory cs3300, inside is directory portfolio
+
+cd to directory portfolio, create venv for django with: python -m venv djvenv
+	there is now a djvenv directory in portfolio
+
+to activate venv, run: djvenv\Scripts\activate.bat(ps1 if in powershell)
+
+install django in venv: pip install Django==4.2 (for version 4.2)
+
+it will prompt you to upgrade pip, run command given. mine was python.exe -m pip install --upgrade pip
+
+start django project: django-admin startproject django_project
+
+move contents of django_project(another django_project subdirectory and manage.py) to working directory, can remove original django_project dir
+
+start server: python manage.py(or path to it, should now be in working dir) runserver
+
+check if server up, internet browser: localhost:8000
+
+this terminal now serves as a status terminal for the running server, need to open a new one to run commands on. 
+	change directory, redo activation step new terminal window
+
+make requirements file: pip freeze > filename.txt
+
+To manage this project in VS Code, open new vs code window, open folder, navigate to portfolio folder and open that
